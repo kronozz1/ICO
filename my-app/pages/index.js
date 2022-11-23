@@ -12,7 +12,6 @@ export default function Home() {
       const [TokenMinted , setTokenMinted] = React.useState(zero);
   const [loading , setloading] = React.useState(false);
   const [tokenAmount , settokenAmount] = React.useState(zero);
-        console.log(tokenAmount)
   const [tokenToBeClaimed , settokenToBeClaimed] = React.useState(zero);
   const ModelRef= React.useRef();
   const getSignerOrProvider = async(needSigner = false) =>{
@@ -23,9 +22,8 @@ export default function Home() {
       window.alert("Change Your Network to Aman's Network");
       throw new Error("Change Your Network to Aman's Network");
     }
-    if(needSigner){
+    if(needSigner ){
       const signer = await web3Provider.getSigner();
-      console.log('signer is here');
       return signer;
     }
     return web3Provider;
