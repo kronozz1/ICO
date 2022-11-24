@@ -35,6 +35,16 @@ contract AmanDevToken is ERC20 , Ownable{
         require(amount > 0 , "You have already claimed your Aman Dev Tokens");
         _mint(msg.sender , amount*maxTokenPerNFT);
     }
+    function withdraw() public {
+        // get the amount of Ether stored in this contract
+        address owner = msg.sender;
+        uint amount = address(this).balance;
+
+        // send all Ether to owner
+        // Owner can receive Ether since the address of owner is payable
+        (bool success, ) = owner.call{value: amount}("");
+        require(success, "Failed to send Ether");
+    }
     receive() external payable{}
     fallback() external payable{}
 }

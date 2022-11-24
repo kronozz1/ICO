@@ -1,4 +1,4 @@
-export const NFTabi = [
+export const NFTabi =[
     {
       "inputs": [
         {
@@ -594,9 +594,9 @@ export const NFTabi = [
       "type": "receive"
     }
   ];
-export const NFTAddress="0x8e171d851aa80e4B506dC650d7afde09B132c739";
+  export const NFTAddress="0xE9EeCDf2F763657492269C344a771767Fe0EaB0E";
 
-export const Tokenabi = [
+export const Tokenabi =[
     {
       "inputs": [
         {
@@ -1013,8 +1013,15 @@ export const Tokenabi = [
       "type": "function"
     },
     {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
       "stateMutability": "payable",
       "type": "receive"
     }
   ];
-export const TokenAddress="0x1038D8561806d4AB3a49061892E206e79E840395";
+export const TokenAddress="0x2D59C2C6c22C426875b043C8893A19Ef6Ad51086";
